@@ -1,7 +1,7 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  /* outline: 1px solid ; */
+  /* outline: 1px solid; */
 }
 body {
   background-color: #f7f8f9;
@@ -17,12 +17,16 @@ nav {
   align-items: center;
 }
 .dots {
-  margin: 20px;
+  margin: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2px;
+  width: 1.7rem;
   justify-content: center;
   align-items: center;
+}
+.dots:hover{
+  cursor: pointer;
 }
 .dots div {
   width: 10px;
@@ -46,6 +50,9 @@ nav {
   color: black;
   font-size: 1.1em;
 }
+.content ul a:hover{
+  cursor: pointer;
+}
 .content ul a i{
   font-weight: bold;
   font-size: small;
@@ -57,7 +64,9 @@ nav {
   justify-content: flex-end;
   padding-right: 1em;
 }
-
+.search{
+  cursor: pointer;
+}
 /* artcal section  */
 
 .article {
@@ -159,6 +168,9 @@ main {
   width: fit-content;
   padding: 2px 3px 2px 3px;
   margin-bottom: 16px;
+}
+.container--text .text p:nth-child(1):hover{
+  cursor: pointer;
 }
 .container--text .text p:nth-child(2) {
   font-size: large;
