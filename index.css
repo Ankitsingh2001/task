@@ -1,6 +1,8 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Gideon Roman', cursive;
+  font-family: 'Poppins', sans-serif;
   /* outline: 1px solid; */
 }
 body {
@@ -26,7 +28,7 @@ nav {
   justify-content: center;
   align-items: center;
 }
-.dots:hover{
+.dots:hover {
   cursor: pointer;
 }
 .dots div {
@@ -51,20 +53,20 @@ nav {
   color: black;
   font-size: 1.1em;
 }
-.content ul a:hover{
+.content ul a:hover {
   cursor: pointer;
 }
-.content ul a i{
+.content ul a i {
   font-weight: bold;
   font-size: small;
 }
 .search {
-  position:absolute;
-  right:0;
-  padding:auto;
-  margin-right:1rem;
+  position: absolute;
+  right: 0;
+  padding: auto;
+  margin-right: 1rem;
 }
-.search{
+.search {
   cursor: pointer;
 }
 /* artcal section  */
@@ -78,9 +80,7 @@ nav {
 }
 .main {
   display: grid;
-  grid-auto-flow: column;
-
-  /* grid-template-columns: repeat(4,1fr);    */
+  grid-auto-flow: column; 
 }
 .item {
   display: flex;
@@ -106,6 +106,7 @@ nav {
   padding-top: 0.5rem;
   color: gray;
   font-weight: 500;
+  text-transform:lowercase;
 }
 
 /* main section  */
@@ -121,11 +122,11 @@ main {
     "item--4 item--2 item--2 item--5";
   grid-gap: 2rem;
   height: 100%;
+  position: relative;
 }
 
 .container--item-1 {
   background: url(./img/article/photo-1497034825429-c343d7c6a68f.avif) no-repeat;
-
   grid-area: item--1;
   height: 100%;
 }
@@ -159,7 +160,6 @@ main {
 .container--text .text {
   position: absolute;
   bottom: 0;
-  /* width: 50%; */
   margin: 0 0 1rem 1rem;
   color: white;
 }
@@ -169,12 +169,12 @@ main {
   padding: 2px 3px 2px 3px;
   margin-bottom: 16px;
 }
-.container--text .text p:nth-child(1):hover{
+.container--text .text p:nth-child(1):hover {
   cursor: pointer;
 }
 .container--text .text p:nth-child(2) {
-  font-size: large;
-  font-weight: 600;
+  font-size: medium; 
+   font-weight: 500;
 }
 .container--text .text p:nth-child(3) {
   margin-top: 16px;
@@ -189,7 +189,7 @@ main {
   }
   .item .image img {
     width: 4rem;
-    height:4rem;
+    height: 4rem;
   }
   .item .text p {
     margin-left: 10px;
@@ -212,14 +212,14 @@ main {
   }
 }
 @media (max-width: 770px) {
-   .content{
+  .content {
     display: none;
-   }
-   .item .text p {
+  }
+  .item .text p {
     margin-left: 10px;
     font-size: medium;
     font-weight: 700;
-  
+
     text-transform: capitalize;
   }
   .main {
@@ -240,19 +240,15 @@ main {
       "item--2 item--2 item--2 item--2"
       "item--2 item--2 item--2 item--2"
       "item--2 item--2 item--2 item--2"
-
       "item--1 item--1 item--1 item--1"
       "item--1 item--1 item--1 item--1"
       "item--1 item--1 item--1 item--1"
-    
       "item--3 item--3 item--3 item--3"
       "item--3 item--3 item--3 item--3"
       "item--3 item--3 item--3 item--3"
-      
       "item--4 item--4 item--4 item--4"
       "item--4 item--4 item--4 item--4"
       "item--4 item--4 item--4 item--4"
-     
       "item--5 item--5 item--5 item--5"
       "item--5 item--5 item--5 item--5"
       "item--5 item--5 item--5 item--5";
@@ -260,46 +256,168 @@ main {
     height: 150%;
   }
   .container--same {
-      background-position:top;
-      background-size: cover;
-      border-radius: 10px;
-      width:20%;
-      position: relative;
-    }
-    .container--item-2 {
-      width:100%;
-      padding-left:2rem
-    }
-    .search {
-      /* display: none; */
-    }
-    .container--text .text {
-        position: relative;
-        bottom: 0;
-        transform: translateX(25%);
-        margin: 0 0 1rem 1rem;
-        color: black;
-        width: 375%;
-      }
+    background-position: top;
+    background-size: cover;
+    border-radius: 10px;
+    width: 20%;
+    position: relative;
+  }
+  .container--item-2 {
+    width: 100%;
+    padding-left: 2rem;
+  }
+  .container--text .text {
+    position: relative;
+    bottom: 0;
+    transform: translateX(25%);
+    margin: 0 0 1rem 1rem;
+    color: black;
+    width: 375%;
+  }
 
-      .container--text .text p:nth-child(1) {
-        color: var(--var);
-        background-color: transparent;
-      }
-      .container--text .text p:nth-child(2) {
-        font-size: large;
-        font-weight: 600;
-      }
-      .container--text .text p:nth-child(3) {
-        margin-top: 16px;
-        display:none;
-      }
-      .container-text .text {
-        position:absolute;
-        bottom: 0;
-        left: -20%;
-        margin: 0 0 1rem 1rem;
-        color: black;
-        width: 80%;
-      }
+  .container--text .text p:nth-child(1) {
+    color: var(--var);
+    background-color: transparent;
+  }
+  .container--text .text p:nth-child(2) {
+    font-size: large;
+    font-weight: 600;
+  }
+  .container--text .text p:nth-child(3) {
+    margin-top: 16px;
+    display: none;
+  }
+  .container-text .text {
+    position: absolute;
+    bottom: 0;
+    left: -20%;
+    margin: 0 0 1rem 1rem;
+    color: black;
+    width: 80%;
+  }
+}
+
+
+/* mobile */
+@media (max-width:499px) {
+  nav {
+    display: grid;
+    grid-template-columns:  2em 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.1rem;
+    background-color: #fff;
+  }
+  .main {
+    display: grid;
+    grid-auto-flow: column; 
+  }
+  .item {
+    display: flex;
+    margin: 8px 18px 8px 18px;
+  }
+  .item .image img {
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    object-fit: cover;
+  }
+  .item .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .item .text p {
+    margin-left: 10px;
+    font-size: medium;
+    font-weight: 500;
+    letter-spacing: -1px;
+    text-transform: capitalize;
+  }
+  .item .text p:nth-child(2) {
+    padding-top: 0.1rem;
+  }
+
+  .main--container {
+    grid-template-columns: auto auto auto auto;
+
+    grid-template-areas:
+      "item--2 item--2 item--2 item--2"
+      "item--2 item--2 item--2 item--2"
+      "item--2 item--2 item--2 item--2"
+      "item--2 item--2 item--2 item--2"
+      "item--2 item--2 item--2 item--2"
+      "item--2 item--2 item--2 item--2"
+      "item--2 item--2 item--2 item--2"
+      "item--2 item--2 item--2 item--2"
+      "item--2 item--2 item--2 item--2"
+      "item--2 item--2 item--2 item--2"
+      "item--2 item--2 item--2 item--2"
+      "item--2 item--2 item--2 item--2"
+    
+      "item--1 item--1 item--1 item--1"
+     
+      "item--3 item--3 item--3 item--3"
+    
+      "item--4 item--4 item--4 item--4"
+      
+      "item--5 item--5 item--5 item--5";
+    grid-gap: 1rem;
+    height: 120%;
+  }
+  .container--same {
+    background-position: top;
+    background-size: cover;
+    border-radius: 10px;
+    width: 20%;
+    height: 80%;
+    position: relative;
+  }
+
+  .container--item-2 {
+    width: 100%;
+    height:100%;
+  }
+  .search {
+    font-size:large;
+  }
+  .container--text .text {
+    position: relative;
+    bottom: 0;
+    transform: translateX(25%);
+    margin: 0 0 1rem 1rem;
+    color: black;
+    width: 375%;
+  }
+
+  .container--text .text p:nth-child(1) {
+    color: var(--var);
+    background-color: transparent;
+  }
+  .container--text .text p:nth-child(2) {
+    font-size: medium;
+    font-weight: 500;
+  }
+  .container--text .text p:nth-child(3) {
+    margin-top: 16px;
+    display: none;
+  }
+  .container-text .text {
+    position: absolute;
+    bottom: 0;
+    left: -20%;
+    margin: 0 0 1rem 1rem;
+    color: black;
+    width: 80%;
+  }
+  .container-text .text p:nth-child(2) {
+    font-size: medium;
+    font-weight: 500;
+  }
 }
