@@ -9,6 +9,7 @@ body {
 .nav {
   margin-top: 0.6em;
   background-color: #ffff;
+  position: relative;
 }
 nav {
   display: grid;
@@ -58,11 +59,10 @@ nav {
   font-size: small;
 }
 .search {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: flex-end;
-  padding-right: 1em;
+  position:absolute;
+  right:0;
+  padding:auto;
+  margin-right:1rem;
 }
 .search{
   cursor: pointer;
@@ -269,6 +269,9 @@ main {
     .container--item-2 {
       width:100%;
       padding-left:2rem
+    }
+    .search {
+      /* display: none; */
     }
     .container--text .text {
         position: relative;
