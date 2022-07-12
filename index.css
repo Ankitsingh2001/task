@@ -46,11 +46,9 @@ nav {
   color: black;
   font-size: 1.1em;
 }
-.content ul a span {
-  position: relative;
-  transform: rotate(90deg);
+.content ul a i{
   font-weight: bold;
-  font-size: large;
+  font-size: small;
 }
 .search {
   display: flex;
@@ -93,8 +91,6 @@ nav {
 .item .text p {
   margin-left: 10px;
   font-size: medium;
-  font-weight: 700;
-
   text-transform: capitalize;
 }
 .item .text p:nth-child(2) {
