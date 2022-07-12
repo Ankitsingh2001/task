@@ -1,0 +1,294 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid ; */
+}
+body {
+  background-color: #f7f8f9;
+}
+.nav {
+  margin-top: 0.6em;
+  background-color: #ffff;
+}
+nav {
+  display: grid;
+  grid-template-columns: 2em 5em 30em 1fr;
+  justify-content: center;
+  align-items: center;
+}
+.dots {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  justify-content: center;
+  align-items: center;
+}
+.dots div {
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 20px;
+}
+.logo {
+  padding: 10px;
+  font-size: 1.3em;
+}
+.content {
+  padding: 1em 2em;
+}
+.content ul {
+  display: flex;
+  gap: 0.8em;
+}
+.content ul a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.1em;
+}
+.content ul a span {
+  position: relative;
+  transform: rotate(90deg);
+  font-weight: bold;
+  font-size: large;
+}
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 1em;
+}
+
+/* artcal section  */
+
+.article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.1rem;
+  background-color: #fff;
+}
+.main {
+  display: grid;
+  grid-auto-flow: column;
+
+  /* grid-template-columns: repeat(4,1fr);    */
+}
+.item {
+  display: flex;
+  margin: 8px 18px 8px 18px;
+}
+.item .image img {
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+}
+.item .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.item .text p {
+  margin-left: 10px;
+  font-size: medium;
+  font-weight: 700;
+
+  text-transform: capitalize;
+}
+.item .text p:nth-child(2) {
+  padding-top: 0.5rem;
+  color: gray;
+  font-weight: 500;
+}
+
+/* main section  */
+
+main {
+  margin: 1.3rem;
+}
+.main--container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-areas:
+    "item--1 item--2 item--2 item--3"
+    "item--4 item--2 item--2 item--5";
+  grid-gap: 2rem;
+  height: 100%;
+}
+
+.container--item-1 {
+  background: url(./img/article/photo-1497034825429-c343d7c6a68f.avif) no-repeat;
+
+  grid-area: item--1;
+  height: 100%;
+}
+.container--item-2 {
+  grid-area: item--2;
+  background: rgb(173, 101, 101);
+  background: url(./img/article/photo-1547976152-ac956d37caf1.avif) no-repeat;
+}
+.container--item-3 {
+  grid-area: item--3;
+  background: rgb(189, 110, 110);
+  background: url(./img/article/istockphoto-1301649080-2048x2048.jpg) no-repeat;
+}
+.container--item-4 {
+  grid-area: item--4;
+  background: rgb(221, 120, 120);
+  background: url(./img/article/photo-1612943855152-7b362a23e60e.avif) no-repeat;
+}
+.container--item-5 {
+  grid-area: item--5;
+  background: rgb(204, 135, 135);
+  background: url(./img/article/macarons-2548827_640.jpg) no-repeat;
+}
+.container--same {
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+
+  position: relative;
+}
+.container--text .text {
+  position: absolute;
+  bottom: 0;
+  /* width: 50%; */
+  margin: 0 0 1rem 1rem;
+  color: white;
+}
+.container--text .text p:nth-child(1) {
+  background-color: var(--var);
+  width: fit-content;
+  padding: 2px 3px 2px 3px;
+  margin-bottom: 16px;
+}
+.container--text .text p:nth-child(2) {
+  font-size: large;
+  font-weight: 600;
+}
+.container--text .text p:nth-child(3) {
+  margin-top: 16px;
+}
+
+/* responsive after nav */
+
+@media (max-width: 1100px) {
+  .item {
+    display: flex;
+    margin: 8px 12px 8px 12px;
+  }
+  .item .image img {
+    width: 4rem;
+    height:4rem;
+  }
+  .item .text p {
+    margin-left: 10px;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+  /* responsiveness of main content */
+
+  .container--text .text p:nth-child(1) {
+    padding: 2px 2px 2px 2px;
+    margin-bottom: 8px;
+  }
+  .container--text .text p:nth-child(2) {
+    font-size: medium;
+    font-weight: 700;
+  }
+  .container--text .text p:nth-child(3) {
+    margin-top: 8px;
+    font-size: small;
+  }
+}
+@media (max-width: 770px) {
+   .content{
+    display: none;
+   }
+   .item .text p {
+    margin-left: 10px;
+    font-size: medium;
+    font-weight: 700;
+  
+    text-transform: capitalize;
+  }
+  .main {
+    grid-template-columns: repeat(4, 100%);
+    overflow-x: scroll;
+  }
+  .main::-webkit-scrollbar {
+    width: 0;
+  }
+  .main--container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+
+    grid-template-areas:
+      "item--2 item--2 item--2 item--2"
+      "item--2 item--2 item--2 item--2"
+      "item--2 item--2 item--2 item--2"
+      "item--2 item--2 item--2 item--2"
+      "item--2 item--2 item--2 item--2"
+      "item--2 item--2 item--2 item--2"
+
+      "item--1 item--1 item--1 item--1"
+      "item--1 item--1 item--1 item--1"
+      "item--1 item--1 item--1 item--1"
+    
+      "item--3 item--3 item--3 item--3"
+      "item--3 item--3 item--3 item--3"
+      "item--3 item--3 item--3 item--3"
+      
+      "item--4 item--4 item--4 item--4"
+      "item--4 item--4 item--4 item--4"
+      "item--4 item--4 item--4 item--4"
+     
+      "item--5 item--5 item--5 item--5"
+      "item--5 item--5 item--5 item--5"
+      "item--5 item--5 item--5 item--5";
+    grid-gap: 2rem;
+    height: 150%;
+  }
+  .container--same {
+      background-position:top;
+      background-size: cover;
+      border-radius: 10px;
+      width:20%;
+      position: relative;
+    }
+    .container--item-2 {
+      width:100%;
+      padding-left:2rem
+    }
+    .container--text .text {
+        position: relative;
+        bottom: 0;
+        transform: translateX(25%);
+        margin: 0 0 1rem 1rem;
+        color: black;
+        width: 375%;
+      }
+
+      .container--text .text p:nth-child(1) {
+        color: var(--var);
+        background-color: transparent;
+      }
+      .container--text .text p:nth-child(2) {
+        font-size: large;
+        font-weight: 600;
+      }
+      .container--text .text p:nth-child(3) {
+        margin-top: 16px;
+        display:none;
+      }
+      .container-text .text {
+        position:absolute;
+        bottom: 0;
+        left: -20%;
+        margin: 0 0 1rem 1rem;
+        color: black;
+        width: 80%;
+      }
+}
